@@ -25,3 +25,14 @@ Elixir Phoenix with typescript react starter
 - Run `mix phx.server`
 
 ### Production
+
+## Work with docker
+
+### Build Docker Image
+
+- `docker build -t phoenix-react-starter .`
+
+### Test that the image is work correctly
+
+- `cd stack/staging`
+- `docker-compose up`

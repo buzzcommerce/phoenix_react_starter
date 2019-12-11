@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  postgres:
+    image: postgres:12.1
+    environment:
+      - POSTGRES_DB=phoenix_react_starter
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+  app:
+    image: phoenix-react-starter
+    ports:
+      - 5000:5000
+    # In production, you should store these config in .env file
+    environment:
+      - SECRET_KEY_BASE=feytHSxPvshdSJ4fTsJUVTg1gJnfQBRKSvNuyZR3NAZR/yUmKE4/T1WaHh/WmETC
+      - DATABASE_URL=ecto://postgres:postgres@postgres/phoenix_react_starter
+      - APP_HOST=localhost
+      - APP_PORT=5000
+      - DB_POOL_SIZE=50
+    # env_file: .env
