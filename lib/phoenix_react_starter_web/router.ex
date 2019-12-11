@@ -20,7 +20,10 @@ defmodule PhoenixReactStarterWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", PhoenixReactStarterWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", PhoenixReactStarterWeb do
+    pipe_through :api
+
+    get "/posts", PostController, :index
+    post "/posts", PostController, :create
+  end
 end

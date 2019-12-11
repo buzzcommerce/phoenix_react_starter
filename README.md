@@ -34,5 +34,7 @@ Elixir Phoenix with typescript react starter
 
 ### Test that the image is work correctly
 
-- `cd stack/staging`
-- `docker-compose up`
+In case you want to test that docker image work properly in local machine.
+
+- Navigate to `stack/staging`, run `docker-compose up`, we will have production postgres start at post 5434
+- Run migration `DATABASE_URL="ecto://postgres:postgres@localhost:5434/phoenix_react_starter" MIX_ENV=prod mix ecto.migrate`

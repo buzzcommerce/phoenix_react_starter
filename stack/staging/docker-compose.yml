@@ -2,12 +2,16 @@ version: "3.7"
 services:
   postgres:
     image: postgres:12.1
+    ports:
+      - 5434:5432
     environment:
       - POSTGRES_DB=phoenix_react_starter
     volumes:
-      - ./postgres:/var/lib/postgresql/data
+      - ./data/postgres:/var/lib/postgresql/data
   app:
     image: phoenix-react-starter
+    depends_on:
+      - postgres
     ports:
       - 5000:5000
     # In production, you should store these config in .env file
