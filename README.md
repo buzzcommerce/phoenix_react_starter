@@ -16,7 +16,18 @@ Elixir Phoenix with typescript react starter
 - Config Hot Reload
 - Use `alpine` docker image
 
-## Getting start
+## Getting started
+
+### Quick
+
+If you are in rush and want try out, follow the steps below:
+
+- Make sure that you have `docker` & `docker-compose` installed on your machine
+- Make sure that `elixir` is installed
+- `git clone https://github.com/buzzcommerce/phoenix_react_starter.git && cd phoenix_react_starter`
+- `cd stacks/rush`
+- Start docker `docker-compose up`
+- Open new terminal, run `DATABASE_URL="ecto://postgres:postgres@localhost:5434/phoenix_react_starter" MIX_ENV=prod mix ecto.migrate` to migrate the database
 
 ### Development
 

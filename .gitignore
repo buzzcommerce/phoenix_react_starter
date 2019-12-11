@@ -36,4 +36,4 @@ npm-debug.log
 .elixir_ls
 
 # Docker volume data
-stack/staging/data
+stacks/*/data
