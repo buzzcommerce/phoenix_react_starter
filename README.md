@@ -13,8 +13,9 @@ Elixir Phoenix with typescript react starter
 
 ## TODO
 
-- Config Hot Reload
+- Config Hot Reload in React
 - Use `alpine` docker image
+- Build assets in docker pipeline
 
 ## Getting started
 
