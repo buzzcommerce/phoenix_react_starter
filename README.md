@@ -30,7 +30,11 @@ If you are in rush and want try out, follow the steps below:
 
 Start postgres by `docker-compose run -p 5434:5432 -v ./data/postgres:/var/lib/postgresql/data postgres`
 
-**Uncomment** `import_config "prod.secret.exs"` line in `config/prod.esx` (we need this only to run the ecto migration, otherwise `config/releases.esx` will be use, see detail at Elixir release)
+**Uncomment** `import_config "prod.secret.exs"` line in `config/prod.esx` (we need this only to run the ecto migration, otherwise `config/releases.esx` will be use, see detail at elixir release, links below)
+
+- https://hexdocs.pm/mix/Mix.Tasks.Release.html
+- https://hexdocs.pm/phoenix/deployment.html, Release section
+- https://akoutmos.com/post/multipart-docker-and-elixir-1.9-releases/
 
 Waiting for the database start properly, migrate the database by issuing
 
@@ -81,7 +85,3 @@ In case you want to test that docker image work properly in local machine.
 
 - Navigate to `stack/staging`, run `docker-compose up`, we will have production postgres start at post 5434
 - Run migration `DATABASE_URL="ecto://postgres:postgres@localhost:5434/phoenix_react_starter" MIX_ENV=prod mix ecto.migrate`
-
-```
-
-```
